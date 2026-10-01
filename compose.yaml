@@ -2,7 +2,7 @@ name: local-dbs
 
 services:
   mongo:
-    image: mongo:${MONGO_VERSION:-8.0}
+    image: mongo:${MONGO_VERSION:-8.2}
     container_name: local-dbs-mongo
     ports:
       - "127.0.0.1:${MONGO_PORT:-27017}:27017"
