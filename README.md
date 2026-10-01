@@ -104,5 +104,6 @@ For each new database, the change is mechanical:
 - **`MongoDB cannot start: Linux kernel versions 6.19 and newer ...`** — recent
   MongoDB builds (e.g. `8.0.32`, `8.3`) refuse to start on Docker Desktop VMs
   whose kernel is 6.19+ (see <https://jira.mongodb.org/browse/SERVER-121912>).
-  Pin a compatible image in `.env`, e.g. `MONGO_VERSION=8.2`, until the fix is
-  released.
+  This project defaults to the newest compatible build (`8.2` via
+  `MONGO_VERSION` in `.env.example`). Bump `MONGO_VERSION` once MongoDB ships a
+  fix for those kernels.
